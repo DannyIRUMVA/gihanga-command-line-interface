@@ -130,4 +130,4 @@ npm run check
 
 ## License
 
-MIT
+MIT open source license. Ushobora gukoresha, gukoporora, guhindura, gusangiza, gutanga sublicense, no kugurisha kopi ukurikije ibiri muri [LICENSE](LICENSE).

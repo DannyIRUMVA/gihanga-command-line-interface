@@ -130,4 +130,4 @@ npm run check
 
 ## License
 
-MIT
+MIT open source license. You can use, copy, modify, distribute, sublicense, and sell copies under the terms in [LICENSE](LICENSE).
