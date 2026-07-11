@@ -5,7 +5,7 @@
 	"type": "module",
 	"piConfig": {
 		"name": "gihanga",
-		"configDir": ".pi"
+		"configDir": ".gihanga"
 	},
 	"bin": {
 		"gihanga": "dist/cli.js"

@@ -81,7 +81,7 @@ function getPackageCommandUsage(command: PackageCommand): string {
 		case "remove":
 			return `${APP_NAME} remove <source> [-l] [--approve|--no-approve]`;
 		case "update":
-			return `${APP_NAME} update [source|self|pi] [--self|--extensions|--all] [--extension <source>] [--approve|--no-approve] [--force]`;
+			return `${APP_NAME} update [source|self|gihanga] [--self|--extensions|--all] [--extension <source>] [--approve|--no-approve] [--force]`;
 		case "list":
 			return `${APP_NAME} list [--approve|--no-approve]`;
 	}
@@ -164,7 +164,7 @@ Impine:
   ${APP_NAME} update                Vugurura Gihanga gusa
   ${APP_NAME} update --all          Vugurura Gihanga n'ingereko zose
   ${APP_NAME} update <source>       Vugurura ipakeji imwe
-  ${APP_NAME} update pi             Vugurura Gihanga gusa (self ni alias ya pi)
+  ${APP_NAME} update gihanga        Vugurura Gihanga gusa (self ni alias ya gihanga)
 `);
 			return;
 
@@ -322,7 +322,7 @@ function parsePackageCommand(args: string[]): PackageCommandOptions | undefined 
 			}
 			updateTarget = { type: "extensions", source: extensionFlagSource };
 		} else if (source) {
-			const sourceIsSelf = source === "self" || source === "pi";
+			const sourceIsSelf = source === "self" || source === "gihanga" || source === "pi";
 			if (sourceIsSelf) {
 				updateTarget = extensionsFlag ? { type: "all" } : { type: "self" };
 			} else {

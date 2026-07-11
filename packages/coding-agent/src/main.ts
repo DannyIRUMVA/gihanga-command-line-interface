@@ -472,8 +472,13 @@ export interface MainOptions {
 
 export async function main(args: string[], options?: MainOptions) {
 	resetTimings();
-	const offlineMode = args.includes("--offline") || isTruthyEnvFlag(process.env.PI_OFFLINE);
+	const offlineMode =
+		args.includes("--offline") ||
+		isTruthyEnvFlag(process.env.GIHANGA_OFFLINE) ||
+		isTruthyEnvFlag(process.env.PI_OFFLINE);
 	if (offlineMode) {
+		process.env.GIHANGA_OFFLINE = "1";
+		process.env.GIHANGA_SKIP_VERSION_CHECK = "1";
 		process.env.PI_OFFLINE = "1";
 		process.env.PI_SKIP_VERSION_CHECK = "1";
 	}

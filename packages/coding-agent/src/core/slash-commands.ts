@@ -37,6 +37,9 @@ export const BUILTIN_SLASH_COMMANDS: ReadonlyArray<BuiltinSlashCommand> = [
 	{ name: "new", description: "Tangira ikiganiro gishya" },
 	{ name: "compact", description: "Gabanya context y'ikiganiro ukoresheje compact" },
 	{ name: "resume", description: "Komeza ikindi kiganiro" },
-	{ name: "reload", description: "Ongera ufungure keybindings, ingereko, ubumenyi, prompts, themes, na context files" },
+	{
+		name: "reload",
+		description: "Ongera ufungure keybindings, ingereko, ubumenyi, prompts, themes, na context files",
+	},
 	{ name: "quit", description: `Sohoka muri ${APP_NAME}` },
 ];

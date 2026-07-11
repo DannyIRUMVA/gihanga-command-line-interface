@@ -229,7 +229,7 @@ ${chalk.bold("Amategeko:")}
   ${APP_NAME} install <source> [-l]     Injiza isoko y'ingereko maze uyongere mu igenamiterere
   ${APP_NAME} remove <source> [-l]      Kuramo isoko y'ingereko mu igenamiterere
   ${APP_NAME} uninstall <source> [-l]   Izina risimbura remove
-  ${APP_NAME} update [source|self|pi]   Vugurura Gihanga (koresha --all kuri Gihanga n'ingereko)
+  ${APP_NAME} update [source|self|gihanga] Vugurura Gihanga (koresha --all kuri Gihanga n'ingereko)
   ${APP_NAME} list                      Erekana ingereko zinjijwe ziri mu igenamiterere
   ${APP_NAME} config [-l]               Fungura TUI kugira ngo wemere cyangwa uhagarike umutungo w'amapakeji (Tab ihindura scope)
   ${APP_NAME} <command> --help          Erekana ubufasha ku mategeko install/remove/uninstall/update/list/config
@@ -273,7 +273,7 @@ ${chalk.bold("Amahitamo:")}
   --verbose                      Hatiriza gutangira herekana amakuru arambuye (isimbura quietStartup setting)
   --approve, -a                  Izera dosiye zo muri iyi poroje kuri iri koreshwa
   --no-approve, -na              Irengagize dosiye zo muri iyi poroje kuri iri koreshwa
-  --offline                      Hagarika ibikorwa by'urusobe mu gutangira (kimwe na PI_OFFLINE=1)
+  --offline                      Hagarika ibikorwa by'urusobe mu gutangira (kimwe na GIHANGA_OFFLINE=1)
   --help, -h                     Erekana ubu bufasha
   --version, -v                  Erekana nomero ya version
 
@@ -373,10 +373,10 @@ ${chalk.bold("Impinduka z'ibidukikije bya porogaramu:")}
   AWS_REGION                       - AWS region for Amazon Bedrock (e.g., us-east-1)
   ${ENV_AGENT_DIR.padEnd(32)} - Ububiko bw'igenamiterere (default: ~/${CONFIG_DIR_NAME}/agent)
   ${ENV_SESSION_DIR.padEnd(32)} - Ububiko bw'ibiganiro (busimburwa na --session-dir)
-  PI_PACKAGE_DIR                   - Simbuza package directory (kuri Nix/Guix store paths)
-  PI_OFFLINE                       - Hagarika ibikorwa by'urusobe mu gutangira iyo ari 1/true/yes
-  PI_TELEMETRY                     - Simbuza install telemetry iyo ari 1/true/yes cyangwa 0/false/no
-  PI_SHARE_VIEWER_URL              - Base URL ya /share command (default: https://pi.dev/session/)
+  GIHANGA_PACKAGE_DIR              - Simbuza package directory (kuri Nix/Guix store paths)
+  GIHANGA_OFFLINE                  - Hagarika ibikorwa by'urusobe mu gutangira iyo ari 1/true/yes
+  GIHANGA_TELEMETRY                - Simbuza install telemetry iyo ari 1/true/yes cyangwa 0/false/no
+  GIHANGA_SHARE_VIEWER_URL         - Base URL ya /share command
 
 ${chalk.bold("Amazina y'ibikoresho bisanzwe birimo:")}
   read   - Soma ibiri muri dosiye
