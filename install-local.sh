@@ -6,7 +6,7 @@ cd "$ROOT_DIR"
 
 npm install --ignore-scripts
 npm run build
-npm link --workspace @earendil-works/pi-coding-agent
+(cd packages/coding-agent && npm link)
 
 echo "Gihanga CLI installed locally."
 echo "Run: gihanga --help"

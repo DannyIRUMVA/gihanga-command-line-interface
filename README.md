@@ -38,7 +38,7 @@ The script runs:
 ```bash
 npm install --ignore-scripts
 npm run build
-npm link --workspace @earendil-works/pi-coding-agent
+(cd packages/coding-agent && npm link)
 ```
 
 After this, the `gihanga` command should work from anywhere on your computer for the current user.
@@ -50,7 +50,7 @@ cd gihanga-command-line-interface
 git pull
 npm install --ignore-scripts
 npm run build
-npm link --workspace @earendil-works/pi-coding-agent
+(cd packages/coding-agent && npm link)
 gihanga --version
 ```
 
@@ -111,7 +111,7 @@ export ANTHROPIC_API_KEY="your-api-key"
 gihanga
 ```
 
-Supported providers include Anthropic, OpenAI, Google Gemini, GitHub Copilot, OpenRouter, Groq, Cerebras, Mistral, Amazon Bedrock, Cloudflare, and others inherited from the original Pi provider layer.
+Supported providers include Anthropic, OpenAI, Google Gemini, GitHub Copilot, OpenRouter, Groq, Cerebras, Mistral, Amazon Bedrock, Cloudflare, and others.
 
 ## Development
 
@@ -122,18 +122,11 @@ npm run check
 ./test.sh
 ```
 
-For quick source testing without global linking:
-
-```bash
-./pi-test.sh
-```
-
 ## Notes
 
 - The command name is `gihanga`.
-- Some internal package names still reference the upstream Pi packages to avoid breaking imports and workspace functionality.
 - The actual command flags stay in English for compatibility, while help text is Kinyarwanda-first.
-- This project is based on the Pi Agent Harness and adapted for the Kinyarwanda developer community.
+- This project is adapted for the Kinyarwanda developer community.
 
 ## License
 

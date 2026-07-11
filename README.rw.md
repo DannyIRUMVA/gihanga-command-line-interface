@@ -38,7 +38,7 @@ Iyo script ikora ibi:
 ```bash
 npm install --ignore-scripts
 npm run build
-npm link --workspace @earendil-works/pi-coding-agent
+(cd packages/coding-agent && npm link)
 ```
 
 Nyuma y'ibi, command `gihanga` izajya ikora aho uri hose kuri mudasobwa yawe kuri uyu mukoresha.
@@ -50,7 +50,7 @@ cd gihanga-command-line-interface
 git pull
 npm install --ignore-scripts
 npm run build
-npm link --workspace @earendil-works/pi-coding-agent
+(cd packages/coding-agent && npm link)
 gihanga --version
 ```
 
@@ -111,7 +111,7 @@ export ANTHROPIC_API_KEY="your-api-key"
 gihanga
 ```
 
-Providers zishyigikiwe zirimo Anthropic, OpenAI, Google Gemini, GitHub Copilot, OpenRouter, Groq, Cerebras, Mistral, Amazon Bedrock, Cloudflare, n'izindi ziva muri provider layer ya Pi.
+Providers zishyigikiwe zirimo Anthropic, OpenAI, Google Gemini, GitHub Copilot, OpenRouter, Groq, Cerebras, Mistral, Amazon Bedrock, Cloudflare, n'izindi.
 
 ## Iterambere / Development
 
@@ -122,18 +122,11 @@ npm run check
 ./test.sh
 ```
 
-Kugerageza source vuba udakoresheje global linking:
-
-```bash
-./pi-test.sh
-```
-
 ## Icyitonderwa
 
 - Command nyamukuru ni `gihanga`.
-- Hari package names zimwe zikigaragaza Pi kugira ngo imports na workspace functionality bitangirika.
 - Flags za command ziguma mu Cyongereza kugira ngo compatibility ikomeze, ariko help text ni Kinyarwanda-first.
-- Uyu mushinga ushingiye kuri Pi Agent Harness, uhindurwa kugira ngo ufashe umuryango w'abanditsi ba porogaramu bakoresha Ikinyarwanda.
+- Uyu mushinga uhindurwa kugira ngo ufashe umuryango w'abanditsi ba porogaramu bakoresha Ikinyarwanda.
 
 ## License
 
