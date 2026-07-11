@@ -2,6 +2,8 @@
 
 Gihanga CLI is a Kinyarwanda-first AI coding assistant for the terminal. It helps developers read, edit, write, and run code from the command line while keeping the familiar workflow of a coding agent.
 
+Website: https://gihanga.upskillsafrica.org
+
 > English documentation: this file  
 > Kinyarwanda documentation: [README.rw.md](README.rw.md)
 
@@ -55,7 +57,7 @@ Gihanga CLI is a Kinyarwanda-first AI coding assistant for the terminal. It help
 One-command install:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | bash
+curl -fsSL https://gihanga.upskillsafrica.org/install.sh | bash
 ```
 
 The installer clones or updates Gihanga CLI in `~/.gihanga-cli`, builds it, and links the `gihanga` command for the current user.
@@ -63,7 +65,7 @@ The installer clones or updates Gihanga CLI in `~/.gihanga-cli`, builds it, and 
 To choose another install folder:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | GIHANGA_INSTALL_DIR="$HOME/Tools/gihanga-cli" bash
+curl -fsSL https://gihanga.upskillsafrica.org/install.sh | GIHANGA_INSTALL_DIR="$HOME/Tools/gihanga-cli" bash
 ```
 
 Manual install:

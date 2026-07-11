@@ -499,7 +499,7 @@ export function expandTildePath(path: string): string {
 	return normalizePath(path);
 }
 
-const DEFAULT_SHARE_VIEWER_URL = "https://github.com/DannyIRUMVA/gihanga-command-line-interface";
+const DEFAULT_SHARE_VIEWER_URL = "https://gihanga.upskillsafrica.org";
 
 /** Get the share viewer URL for a gist ID */
 export function getShareViewerUrl(gistId: string): string {

@@ -43,7 +43,7 @@ function getDefaultAttributionHeaders(
 
 	if (isOpenRouterModel(model)) {
 		return {
-			"HTTP-Referer": "https://github.com/DannyIRUMVA/gihanga-command-line-interface",
+			"HTTP-Referer": "https://gihanga.upskillsafrica.org",
 			"X-OpenRouter-Title": "Gihanga CLI",
 			"X-OpenRouter-Categories": "cli-agent",
 		};
