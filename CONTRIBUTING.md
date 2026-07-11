@@ -1,102 +1,126 @@
-# Contributing to pi
+# Contributing to Gihanga CLI
 
-This guide exists to save both sides time.
+Thank you for helping improve Gihanga CLI.
+
+Gihanga is a Kinyarwanda-first AI coding assistant for the terminal. Contributions should keep the project useful, understandable, and welcoming for the Kinyarwanda developer community.
 
 ## Philosophy
 
-First things first: **pi's core is minimal**.
+Gihanga should stay practical and focused:
 
-If your feature does not belong in the core, it should be an extension. PRs that bloat the core will likely be rejected.
-
-Pi's core exists to be minimal and to be extensible so that it can be influenced and manipulated by extensions.  Even hook points for extensions however should be well considered and discussed to avoid adding unmaintainable bloat and complex interactions.
+- Keep the terminal workflow simple.
+- Keep the command `gihanga` stable.
+- Keep help text clear and Kinyarwanda-first.
+- Prefer extensions, ubumenyi, prompt templates, or themes for features that do not belong in the core.
+- Avoid adding complexity that makes the CLI harder to maintain.
 
 ## The One Rule
 
-**You must understand your code.** If you cannot explain what your changes do and how they interact with the rest of the system, your PR will be closed.
+**Understand your code before you submit it.**
 
-Using AI to write code is fine. Submitting AI-generated slop without understanding it is not.
+If you cannot explain what your change does, why it is needed, and how it affects the rest of the system, do not submit it yet.
 
-If you use an agent, run it from the `pi` root directory so it picks up `AGENTS.md` automatically. Your agent must follow the rules and guidelines in that file.
+Using AI tools is allowed. Submitting code you do not understand is not.
 
-## Contribution Gate
+## Good Contributions
 
-All issues and PRs from new contributors are auto-closed by default.
+Good contributions are:
 
-Issues submitted Friday through Sunday are not guaranteed to be reviewed.  If something is urgent, ask on Discord: https://discord.com/invite/3cU7Bz4UPx
+- small and focused
+- easy to review
+- tested when they change behavior
+- clear about the problem they solve
+- respectful of existing functionality
+- careful with user-facing Kinyarwanda wording
 
-Maintainers review auto-closed issues daily and reopen worthwhile ones. Issues that do not meet the quality bar below will not be reopened or receive a reply.
+Examples:
 
-Approval happens through maintainer replies on issues:
+- Fixing a bug with a short reproduction
+- Improving Kinyarwanda help text
+- Improving documentation or install instructions
+- Adding a focused test for changed behavior
+- Improving extension, ubumenyi, or theme support
 
-- `lgtmi`: your future issues will not be auto-closed
-- `lgtm`: your future issues and PRs will not be auto-closed
+## Issues
 
-`lgtmi` does not grant rights to submit PRs. Only `lgtm` grants rights to submit PRs.
+Before opening an issue:
 
-## Quality Bar For Issues
+- Search existing issues first.
+- Keep the report short and concrete.
+- Explain what happened and what you expected.
+- Include steps to reproduce when possible.
+- Include logs only when they help.
+- If the issue is about translation, include the exact current text and your proposed replacement.
 
-If you open an issue, you must use one of the two GitHub issue templates.
+## Pull Requests
 
-If you open an issue, keep it short, concrete, and worth reading.
-
-- Keep it concise. If it does not fit on one screen, it is too long.
-- Write in your own voice (do not use an LLM to generate text, if you must, follow up with a clearly AI labeled comment).
-- State the bug or request clearly.
-- Explain why it matters.
-- If you want to implement the change yourself, say so.
-
-If the issue is real and written well, a maintainer may reopen it, reply `lgtmi`, or reply `lgtm`.
-
-## Blocking
-
-If you ignore this document twice, or if you spam the tracker with agent-generated issues, your GitHub account will be permanently blocked.
-
-If you send a large volume of issues through automation, your GitHub account will be permanently blocked. No taksies backsies.
-
-## Before Submitting a PR
-
-Do not open a PR unless you have already been approved with `lgtm`.
-
-Before submitting a PR:
+Before submitting a pull request:
 
 ```bash
 npm run check
 ./test.sh
 ```
 
-Both must pass.
+Both should pass unless you clearly explain why they could not be run.
 
-Do not edit `CHANGELOG.md`. Changelog entries are added by maintainers.
+PRs should include:
 
-If you are adding a new provider to `packages/ai`, see `AGENTS.md` for required tests.
+- what changed
+- why it changed
+- how you tested it
+- any risk or follow-up work
 
-## Questions?
+## Translation Guidelines
 
-Ask on [Discord](https://discord.com/invite/nKXTsAcmbT).
+Gihanga is Kinyarwanda-first, but developer terms can stay in English when that is clearer.
 
-## FAQ
+Preferred wording:
 
-### Why are new issues and PRs auto-closed?
+- code: `kode`
+- skills: `ubumenyi`
+- extensions: `ingereko`
+- settings/config: `igenamiterere`
+- session: `ikiganiro`
+- model: `icyitegererezo`
+- command: `itegeko` or `command` when referring to literal terminal input
 
-pi receives more issues than the maintainers can responsibly review in real time. Many reports do not meet the quality bar in this guide or do not follow CONTRIBUTING.md. Some are slung at the repository mindlessly via an agent instead of being reviewed and shaped by the person submitting them. Auto-closing creates a buffer so maintainers can review the tracker on their own schedule and reopen the issues that meet the quality bar.
+Keep literal flags and command names unchanged:
 
-### Why are weekend issues lower priority?
+- `gihanga`
+- `--help`
+- `--model`
+- `/settings`
+- `/login`
 
-We triage the tracker during working hours. That means more issues can accumulate over the weekend. Anything submitted Friday through Sunday may be missed or given lower priority in the Monday review queue. If a problem is urgent, ask on Discord and include the short version, a repro, and the relevant logs.
+Do not translate command syntax if it would break copy-paste examples.
 
-### Why do some issues get no reply?
+## Development Setup
 
-A reply is maintenance work too. Low-signal issues, unclear reports, duplicates, and issues that do not follow this guide may be closed without discussion. This keeps time available for reproducible bugs, thoughtful requests, and contributors who have done the work to make their report actionable.
+Install locally:
 
-### Why not let AI triage everything?
+```bash
+curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | bash
+```
 
-AI can help group duplicates, summarize reports, and spot missing information. It is not trusted to make final maintainer decisions. Polished AI-generated issues can still be wrong, misleading, or expensive to investigate. Human review remains the final gate.
+Manual development setup:
 
-### Is this hostile to contributors?
+```bash
+npm install --ignore-scripts
+npm run build
+npm run check
+./test.sh
+```
 
-No. It is a guardrail against burnout and tracker spam. Short, concrete, reproducible issues are welcome. Thoughtful contributions are welcome. Automated slop, entitlement, and large volumes of low-effort reports are not.
+## Security
 
-## Where can I learn about plans?
+Do not commit secrets, tokens, API keys, private keys, or personal credentials.
 
-Earendil uses RFCs to discuss larger changes.  Not all of them are public, but
-quite a few are.  They can be found at [rfc.earendil.com](https://rfc.earendil.com/keyword/pi/).
+Do not paste real API keys into issues or pull requests. Use placeholders such as:
+
+```bash
+export ANTHROPIC_API_KEY="your-api-key"
+```
+
+## License
+
+By contributing, you agree that your contribution is licensed under the MIT license used by this repository.
