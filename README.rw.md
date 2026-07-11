@@ -2,7 +2,7 @@
 
 Gihanga CLI ni umufasha wa AI mu kwandika kode ukoreshwa muri terminal, ushyira Ikinyarwanda imbere. Ifasha abanditsi ba porogaramu gusoma, guhindura, kwandika, no gukoresha kode hifashishijwe command line.
 
-Urubuga: https://gihanga.upskillsafrica.org
+Urubuga: https://console.upskillsafrica.org
 
 > Inyandiko y'Ikinyarwanda: iyi dosiye  
 > English documentation: [README.md](README.md)
@@ -57,7 +57,7 @@ Urubuga: https://gihanga.upskillsafrica.org
 Kwinjiza ukoresheje command imwe:
 
 ```bash
-curl -fsSL https://gihanga.upskillsafrica.org/install.sh | bash
+curl -fsSL https://console.upskillsafrica.org/install.sh | bash
 ```
 
 Iyi installer ishyira cyangwa ivugurura Gihanga CLI muri `~/.gihanga-cli`, ikayubaka, hanyuma igahuza command `gihanga` kuri uyu mukoresha.
@@ -65,7 +65,7 @@ Iyi installer ishyira cyangwa ivugurura Gihanga CLI muri `~/.gihanga-cli`, ikayu
 Niba ushaka indi folder:
 
 ```bash
-curl -fsSL https://gihanga.upskillsafrica.org/install.sh | GIHANGA_INSTALL_DIR="$HOME/Tools/gihanga-cli" bash
+curl -fsSL https://console.upskillsafrica.org/install.sh | GIHANGA_INSTALL_DIR="$HOME/Tools/gihanga-cli" bash
 ```
 
 Kwinjiza manually:
