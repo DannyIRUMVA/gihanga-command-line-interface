@@ -24,7 +24,21 @@ Gihanga CLI ni umufasha wa AI mu kwandika kode ukoreshwa muri terminal, ushyira 
 
 ## Script yo kwinjiza local
 
-Koresha ibi muri folder ushaka kubikamo source code:
+Kwinjiza ukoresheje command imwe:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | bash
+```
+
+Iyi installer ishyira cyangwa ivugurura Gihanga CLI muri `~/.gihanga-cli`, ikayubaka, hanyuma igahuza command `gihanga` kuri uyu mukoresha.
+
+Niba ushaka indi folder:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | GIHANGA_INSTALL_DIR="$HOME/Tools/gihanga-cli" bash
+```
+
+Kwinjiza manually:
 
 ```bash
 git clone https://github.com/DannyIRUMVA/gihanga-command-line-interface.git
@@ -38,7 +52,7 @@ Iyo script ikora ibi:
 ```bash
 npm install --ignore-scripts
 npm run build
-(cd packages/coding-agent && npm link)
+# ihuza command ya gihanga kuri uyu mukoresha
 ```
 
 Nyuma y'ibi, command `gihanga` izajya ikora aho uri hose kuri mudasobwa yawe kuri uyu mukoresha.
@@ -50,7 +64,7 @@ cd gihanga-command-line-interface
 git pull
 npm install --ignore-scripts
 npm run build
-(cd packages/coding-agent && npm link)
+# ihuza command ya gihanga kuri uyu mukoresha
 gihanga --version
 ```
 

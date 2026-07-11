@@ -24,7 +24,21 @@ Gihanga CLI is a Kinyarwanda-first AI coding assistant for the terminal. It help
 
 ## Local install script
 
-Run this from the folder where you want to keep the source code:
+One-command install:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | bash
+```
+
+The installer clones or updates Gihanga CLI in `~/.gihanga-cli`, builds it, and links the `gihanga` command for the current user.
+
+To choose another install folder:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DannyIRUMVA/gihanga-command-line-interface/main/install.sh | GIHANGA_INSTALL_DIR="$HOME/Tools/gihanga-cli" bash
+```
+
+Manual install:
 
 ```bash
 git clone https://github.com/DannyIRUMVA/gihanga-command-line-interface.git
@@ -38,7 +52,7 @@ The script runs:
 ```bash
 npm install --ignore-scripts
 npm run build
-(cd packages/coding-agent && npm link)
+# links the gihanga command for your user
 ```
 
 After this, the `gihanga` command should work from anywhere on your computer for the current user.
@@ -50,7 +64,7 @@ cd gihanga-command-line-interface
 git pull
 npm install --ignore-scripts
 npm run build
-(cd packages/coding-agent && npm link)
+# links the gihanga command for your user
 gihanga --version
 ```
 
