@@ -15,6 +15,34 @@ Gihanga CLI is a Kinyarwanda-first AI coding assistant for the terminal. It help
 - Supports ubumenyi, extensions, prompt templates, and themes
 - Shows Kinyarwanda-first CLI help and slash-command descriptions
 
+## Terminal graph
+
+```text
+┌──────────────────────────────┐
+│          Gihanga CLI          │
+│  Kinyarwanda-first AI helper  │
+└───────────────┬──────────────┘
+                │
+                ▼
+┌──────────────────────────────┐
+│ gihanga                      │
+│ Start the terminal assistant │
+└───────────────┬──────────────┘
+                │
+     ┌──────────┼──────────┐
+     ▼          ▼          ▼
+┌─────────┐ ┌─────────┐ ┌─────────┐
+│  read   │ │  edit   │ │  bash   │
+│ files   │ │  code   │ │command  │
+└────┬────┘ └────┬────┘ └────┬────┘
+     └──────────┼──────────┘
+                ▼
+┌──────────────────────────────┐
+│ Write changes, explain code, │
+│ and keep your workflow local │
+└──────────────────────────────┘
+```
+
 ## Requirements
 
 - Linux, macOS, or Windows terminal
